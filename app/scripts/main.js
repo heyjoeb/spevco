@@ -11,5 +11,8 @@ $(document).ready(function(){
   $('.stories-slider').bxSlider({
 	pagerCustom: '#stories-slider-pager'
   });
+
+  // responsive video embed
+  $(".responsive-video-embed").fitVids();
   
 });

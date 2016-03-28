@@ -153,26 +153,35 @@ html {
         }
       }
     }
-  }
-  h2 {
+    h2 {
 
-  }
-  .container-stories-slider {
-    background: #575757;
-  }
-  .stories-slider {
-    .img-story {
-      padding: 0;
     }
-    .info-story {
-      color: #fff;
-      padding: 0;
-      text-align: center;
+    .container-stories-slider {
+      background: #575757;
     }
-    .logo-story {
-      img {
-        display: inline-block;
+    .stories-slider {
+      .img-story {
+        padding: 0;
+      }
+      .info-story {
+        color: #fff;
+        padding: 0;
+        text-align: center;
+      }
+      .logo-story {
+        img {
+          display: inline-block;
+        }
       }
     }
   }
+
+  // learn
+  .learn {
+    overflow: hidden;
+    background: #66B2C4;
+    color: #fff;
+    padding: 100px 0;
+  }
+  
 }
