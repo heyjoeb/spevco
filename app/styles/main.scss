@@ -60,8 +60,28 @@ html {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
 }
-// navbar
+.btn-lg {
+  font-size: 3em;
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
 .spevco {
+  .bx-wrapper {
+    border: 0;
+    box-shadow: none;
+  }
+  .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+    bottom: 55px;
+  }
+}
+// -------------------------------  HOME
+.spevco {
+  // navbar
+  .main-nav {
+    background: rgba(255, 255, 255, 0.65);
+  }
   .navbar-brand {
     width: 229px;
     height: auto;
@@ -72,5 +92,39 @@ html {
   .navbar-nav {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
+  }
+  // main-slider
+  .container-main-slider {
+    position: relative;
+    .btn-contact {
+      position: absolute;
+      right: 0;
+      top: 30%;
+      background: #E14335;
+    }
+  }
+  .main-slider {
+    .content-slide {
+      position: absolute;
+      z-index: 2;
+      top: 30%;
+      left: 10%;
+      h1 {
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 6.429em;
+        font-weight: 700;
+      }
+      .btn-lg {
+    
+      }
+    }
+    .img-container {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+    }
   }
 }

@@ -3,7 +3,13 @@ $(document).ready(function(){
   /*jshint camelcase: false */
 
   
-  // backstretch
-  
+  // sliders
+  $('.main-slider').bxSlider({
+  	controls: false
+  });
+
+  $('.stories-slider').bxSlider({
+	pagerCustom: '#stories-slider-pager'
+  });
   
 });

@@ -11,6 +11,7 @@
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/bxslider-4/dist/jquery.bxslider.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,600italic,300|Oswald:400,300,700' rel='stylesheet' type='text/css'>
@@ -29,7 +30,7 @@
     
     <div class="spevco">
       <!-- Fixed navbar -->
-      <nav class="navbar navbar-default navbar-fixed-top">
+      <nav class="navbar navbar-fixed-top main-nav">
         <div class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -60,8 +61,71 @@
             </ul>
           </div><!--/.nav-collapse -->
         </div>
-      </nav>
-    </div>
+      </nav><!-- /main-nav -->
+
+      <div class="container-main-slider">
+        <ul class="main-slider">
+          <li>
+            <div class="content-slide">
+              <h1>If you dream it,<br>we can build it</h1>
+              <a href="" class="btn-lg">Launch your vision</a>
+            </div>
+            <img src="images/01.jpg" alt="">
+          </li>
+          <li>
+            <div class="content-slide">
+              <h1>Another slide</h1>
+              <a href="" class="btn-lg">Launch your vision</a>
+            </div>
+            <img src="images/01.jpg" alt="">
+          </li>
+        </ul>
+        <div class="btn-contact">
+          <a href=""><img src="images/btn-contact.png" alt=""></a>
+        </div>
+      </div><!-- /main-slider -->
+
+      <div class="container">
+        <div class="row">
+          <div class="customer-stories">
+            <h2>View a selection of our customer stories</h2>
+            <ul class="stories-slider">
+              <li>
+                <div class="col-md-6">
+                  imagen
+                </div>
+                <div class="col-md-6">
+                  info
+                </div>
+              </li>
+              <li>
+                <div class="col-md-6">
+                  imagen
+                </div>
+                <div class="col-md-6">
+                  info
+                </div>
+              </li>
+              <li>
+                <div class="col-md-6">
+                  imagen
+                </div>
+                <div class="col-md-6">
+                  info
+                </div>
+              </li>
+            </ul><!-- /stories-slider -->
+            <div id="stories-slider-pager">
+              <a data-slide-index="0" href=""><img src="images/01.jpg" /></a>
+              <a data-slide-index="1" href=""><img src="images/01.jpg" /></a>
+              <a data-slide-index="2" href=""><img src="images/01.jpg" /></a>
+            </div>
+          </div><!-- /customer-stories -->
+        </div><!-- /row -->
+      </div><!-- /container -->
+
+
+    </div> <!-- /spevco -->
     
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
@@ -76,6 +140,7 @@
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/bxslider-4/dist/jquery.bxslider.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     
