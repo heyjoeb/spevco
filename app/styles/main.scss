@@ -67,6 +67,13 @@ html {
   text-transform: uppercase;
   font-weight: 700;
 }
+.btn-md {
+  font-size: 2.143em;
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
 .spevco {
   .bx-wrapper {
     border: 0;
@@ -125,6 +132,47 @@ html {
       z-index: 1;
       top: 0;
       left: 0;
+    }
+  }
+  // customer-stories
+  .customer-stories {
+    .bx-wrapper {
+      background: transparent;
+    }
+    .stories-pager {
+      text-align: center;
+      a {
+        display: inline-block;
+        margin: 0 20px;
+        width: 100px;
+        &.active {
+          opacity: 0.5;
+        }
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  h2 {
+
+  }
+  .container-stories-slider {
+    background: #575757;
+  }
+  .stories-slider {
+    .img-story {
+      padding: 0;
+    }
+    .info-story {
+      color: #fff;
+      padding: 0;
+      text-align: center;
+    }
+    .logo-story {
+      img {
+        display: inline-block;
+      }
     }
   }
 }
