@@ -183,5 +183,56 @@ html {
     color: #fff;
     padding: 100px 0;
   }
+
+  //process
+  .process {
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    padding: 100px 0;
+    h2 {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+    .process-slider {
+      position: relative;
+      z-index: 1;
+    }
+    .process-pager {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      a {
+        display: inline-block;
+        margin: 0 20px;
+        &.active, &:hover {
+          .icon {
+            background: #F2B305;
+          }
+        }
+        .icon {
+          border: solid 3px #F2B305;
+          height: 160px;
+          width: 160px;
+          border-radius: 50%;
+        }
+      }
+    }
+    .process-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+  }
+  // blog-feed
+  .blog-feed {
+    overflow: hidden;
+    padding: 100px 0;
+    h2 {
+      text-align: center;
+    }
+  }
   
 }
