@@ -190,18 +190,21 @@ html {
     position: relative;
     color: #fff;
     padding: 100px 0;
-    h2 {
+    .container-process-slider {
       position: relative;
       z-index: 1;
+      .bx-wrapper {
+        background: transparent;
+      }
+    }
+    h2 {
       text-align: center;
     }
     .process-slider {
-      position: relative;
-      z-index: 1;
+
     }
     .process-pager {
-      position: relative;
-      z-index: 1;
+
       text-align: center;
       a {
         display: inline-block;
@@ -232,6 +235,46 @@ html {
     padding: 100px 0;
     h2 {
       text-align: center;
+    }
+    .blog-post {
+      margin-bottom: 35px;
+    }
+    .wrapper-info-post {
+      min-height: 300px;
+      overflow: hidden;
+      background-size: cover;
+      position: relative;
+    }
+    .info-post {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 85px;
+      background: rgba(226, 66, 53, 0.8);
+      color: #fff;
+      padding: 15px;
+      width: 100%;
+      time {
+        font-size: 1em;
+      }
+      h1 {
+        font-size: 1.5em;
+        margin-top: 10px;
+      }
+    }
+    .icon-post {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 30px;
+      width: 30px;
+      color: #fff;
+      text-align: center;
+      font-size: 1.8em;
+      line-height: 1.3em;
+      &.more {
+        background: #F2B305;
+      }
     }
   }
   
