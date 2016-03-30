@@ -70,16 +70,24 @@
               <h1>If you dream it,<br>we can build it</h1>
               <a href="" class="btn-lg">Launch your vision</a>
             </div>
-            <img src="images/01.jpg" alt="">
           </li>
           <li>
             <div class="content-slide">
               <h1>Another slide</h1>
               <a href="" class="btn-lg">Launch your vision</a>
             </div>
-            <img src="images/01.jpg" alt="">
           </li>
         </ul>
+        <div class="container-video">
+          <div class="video-overlay"></div>
+          <div class="video">
+            <video id="daVideo" loop="loop" autoplay="autoplay" poster="images/videos/vid.jpg">
+              <source src="images/videos/vid.mp4" type="video/mp4" />
+              <source src="images/videos/vid.webm" type="video/webm" />
+              <source src="images/videos/vid.ogv" type="video/ogg" />
+            </video>
+          </div><!-- /video -->
+        </div><!-- /container-video -->
         <div class="btn-contact">
           <a href=""><img src="images/btn-contact.png" alt=""></a>
         </div>
@@ -365,11 +373,23 @@
                 </form>
               </div><!-- container-contact-form -->
             </div><!-- /col-md-6 -->
+
             <div class="col-md-6">
               <div class="container-contact-map">
-                map
+                <div id="mapCanvas"></div>
+                <div class="info-contact-map">
+                  <h3>Contact us today!</h3>
+                  <div class="wrapper-contact-list">
+                    <ul>
+                      <li><span class="icon">SPEVCO, Inc.<br>8118 Reynolda Road, Pfafftown, NC 2704000</span></li>
+                      <li><span class="icon">Toll Free: (336) 924-8100</span></li>
+                      <li><span class="icon">24 Hour Roadside Assistance<br>Toll Free: (800) 982-9415 option 5</span></li>
+                    </ul>
+                  </div>
+                </div><!-- info-contact-map -->
               </div><!-- container-contact-map -->
             </div><!-- /col-md-6 -->
+
           </div><!-- /row -->
         </div><!-- /container -->
       </div><!-- /contact -->
@@ -525,5 +545,77 @@
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
+
+    <!-- script google map -->
+        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDvMhMs14SBVRxlDfTNkAavussVQl6fthA&sensor=false" type="text/javascript"></script>
+
+        <script>
+    
+            /*Mapa - stylers: hue (rgb hex), lightness (-100 100), saturation (-100 100), gamma (0.01 10.0), inverse_lightness (true/false), visibility (on, off, simplified), color (rgb hex), weight (<= 0) */
+            function initialize() {
+                    var styles = [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}];
+                      
+                    var styledMap = new google.maps.StyledMapType(styles,
+                      {name: 'Styled Map'});
+                    
+                    var myLatlng = new google.maps.LatLng(36.200335, -80.394407);
+                    
+                    var image = 'images/map-icon-spevco.png';
+
+                    
+                    var mapOptions = {
+                      center: new google.maps.LatLng(36.200335, -80.394407),
+                      scrollwheel: true,
+                      draggable: true,
+                      zoom: 15,
+                      panControl: false,
+                      zoomControl: false,
+                      mapTypeControl: false,
+                      scaleControl: false,
+                      streetViewControl: false,
+                      overviewMapControl: false,
+                      mapTypeId: google.maps.MapTypeId.ROADMAP,
+                      mapTypeControlOptions: {
+                          mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+                        }
+                    };
+                    
+                    var map = new google.maps.Map(document.getElementById("mapCanvas"),
+                        mapOptions);
+                    
+                    map.mapTypes.set('map_style', styledMap);
+                    map.setMapTypeId('map_style'); 
+
+                    var contentString = '<div class="map-content">'+
+                          '<div id="siteNotice">'+
+                          '</div>'+
+                          '<h1 id="firstHeading" class="firstHeading">SPEVCO Inc.</h1>'+
+                          '<div id="bodyContent">'+
+                          '<p> 8118 Reynolda Road, Pfafftown, NC 2704000</p>' +
+                          '</div>'+
+                          '</div>';
+
+                      var infowindow = new google.maps.InfoWindow({
+                          content: contentString
+                      });
+
+                      var marker = new google.maps.Marker({
+                          position: myLatlng,
+                          map: map,
+                          icon: image,
+                          title: 'La Briocherie'
+                      });
+                      google.maps.event.addListener(marker, 'click', function() {
+                        infowindow.open(map,marker);
+                      });
+                     
+                    
+                    
+                    // To add the marker to the map, call setMap();
+                    marker.setMap(map);
+                  //Fin Mapa
+                }
+            initialize()
+        </script>
   </body>
 </html>
