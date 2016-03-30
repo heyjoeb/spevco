@@ -277,5 +277,44 @@ html {
       }
     }
   }
+  // contact
+  .contact {
+    padding: 100px 0;
+    background: #4b4c4f url('../images/bg-contact.png');
+    background-size: cover;
+    color: #fff;
+    overflow: hidden;
+  }
+  // sign-up
+  .sign-up {
+    padding: 100px 0;
+    .logo-footer {
+      text-align: center;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    li {
+      display: inline-block;
+    }
+    .sign-up-form {
+      input[type="email"] {
+        width: 300px;
+      }
+    }
+  }
+  // main-footer
+  .main-footer {
+    padding-top: 100px;
+    overflow: hidden;
+    color: #fff;
+    background: #1D1D1B;
+    .legal {
+      background: #3C3C3C;
+      margin-top: 100px;
+      text-align: center;
+    }
+  }
   
 }
