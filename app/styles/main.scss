@@ -74,6 +74,9 @@ html {
   text-transform: uppercase;
   font-weight: 700;
 }
+.txt-bold {
+  font-weight: 600;
+}
 .spevco {
   .bx-wrapper {
     border: 0;
@@ -174,15 +177,6 @@ html {
   // main-slider
   .container-main-slider {
     position: relative;
-    .btn-contact {
-      position: absolute;
-      right: 0;
-      top: 30%;
-      background: #E14335;
-    }
-  }
-  .container-main-slider {
-    position: relative;
     overflow: hidden;
     .bx-wrapper {
       z-index: 2;
@@ -216,6 +210,65 @@ html {
       min-width: 100%;
       height: auto;
       width: auto;
+    }
+    .btn-contact {
+      position: absolute;
+      right: 0;
+      top: 30%;
+      background: #E14335;
+      z-index: 2;
+      @include effect_bg;
+      &:hover, &:active, &:focus, &.active {
+        background: #F5BD47;
+        @include effect_bg;
+      }
+    }
+    .slider-contact-info {
+      position: absolute;
+      right: 60px;
+      top:30%;
+      background: rgba(0,0,0,0.5);
+      height: 349px;
+      width: 500px;
+      color: #fff;
+      h2 {
+        background: rgba(0,0,0,0.5);
+        text-transform: uppercase;
+        font-family: 'Oswald', sans-serif;
+        font-size: 2.857em;
+        font-weight: 700;
+        margin: 0;
+        padding-top: 15px;
+        padding-left: 30px;
+        border-left: solid 4px #E14335;
+        padding-bottom: 15px;
+      }
+      .wrapper-slider-contact-info {
+        padding: 20px 5px 15px 30px;
+        span {
+          float: left;
+        }
+      }
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+        font-size: 1.286em;
+      }
+      li {
+        overflow: hidden;
+        margin-bottom: 15px;
+      }
+      .icon {
+        width: 62px;
+        display: inline-block;
+        margin-right: 15px;
+      }
+      .info-contact {
+        margin-top: 7px;
+        &.single-line {
+          margin-top: 20px;
+        }
+      }
     }
   }
   .main-slider {
