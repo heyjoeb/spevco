@@ -59,6 +59,7 @@ $icon-font-path: '../fonts/';
 html, body {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
+  background: #F3F3F3;
 }
 .btn-lg {
   display: inline-block;
@@ -719,6 +720,10 @@ html, body {
     padding: 100px 0;
     .logo-footer {
       text-align: center;
+      margin-bottom: 20px;
+      img {
+        width: 160px;
+      }
     }
     ul {
       list-style-type: none;
@@ -726,10 +731,93 @@ html, body {
     }
     li {
       display: inline-block;
+      margin-right: -4px;
+    }
+    .sign-up-links {
+      padding-top: 40px;
+      margin-top: 30px;
+      border-top: solid 1px #1D1D1B;
+      padding-left: 0;
+      a {
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase;
+        border-left: 3px solid #e14335;
+        padding: 10px;
+        font-weight: 700;
+        color: #575757;
+        display: block;
+        background: transparent;
+        @include effect_bg;
+        &:hover, &:focus, &:active {
+          background: #E14335;
+          color: #fff;
+          text-decoration: none;
+          @include effect_bg;
+        }
+      }
     }
     .sign-up-form {
+      padding-top: 40px;
+      margin-top: 30px;
+      border-top: solid 1px #1D1D1B;
+      padding-right: 0;
+      .form-group {
+        width: 100%;
+        overflow: hidden;
+      }
       input[type="email"] {
-        width: 300px;
+        width: 100%;
+        background: #D2D2D2;
+        font-size: 0.9em;
+      }
+      ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: #fff;
+        text-transform: uppercase;
+      }
+      ::-moz-placeholder { /* Firefox 19+ */
+        color: #fff;
+        text-transform: uppercase;
+      }
+      :-ms-input-placeholder { /* IE 10+ */
+        color: #fff;
+        text-transform: uppercase;
+      }
+      :-moz-placeholder { /* Firefox 18- */
+        color: #fff;
+        text-transform: uppercase;
+      }
+      .container-btn {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+      .btn-send {
+        background: #F2B305;
+        border-radius: 0;
+        border: 0;
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1.1em;
+        position: relative;
+        padding-right: 45px;
+        @include effect_bg;
+        &:hover, &:active, &:focus {
+          background: #E14335;
+          @include effect_bg;
+        }
+        .icon {
+          background: #999999;
+          height: 34px;
+          width: 34px;
+          line-height: 34px;
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+        .arrow-right {
+          width: 10px;
+        }
       }
     }
   }
