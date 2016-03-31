@@ -1,4 +1,5 @@
-/* global $ */
+/* global $, e */
+/*eslint-disable no-unused-vars*/
 'use strict';
 $(document).ready(function(){
 	/* jshint strict: false */
@@ -18,18 +19,18 @@ $(document).ready(function(){
 	// responsive video embed
 	$('.responsive-video-embed').fitVids();
 	// ADD SLIDEDOWN ANIMATION TO DROPDOWN //
-  	$('.dropdown').on('show.bs.dropdown', function(e){
-    	$(this).find('.dropdown-menu').first().stop(true, true).slideDown();
-  	});
-  	// ADD SLIDEUP ANIMATION TO DROPDOWN //
-  	$('.dropdown').on('hide.bs.dropdown', function(e){
-    	$(this).find('.dropdown-menu').first().stop(true, true).slideUp();
-  	});
-  	// CONTACT INFO SLIDE
-  	$('.slide-toggle').click(function(){
-        $('.slider-contact-info').stop().animate({
-        	width: 'toggle'
-        });
-    });
+	$('.dropdown').on('show.bs.dropdown', function(e){
+		$(this).find('.dropdown-menu').first().stop(true, true).slideDown();
+	});
+	// ADD SLIDEUP ANIMATION TO DROPDOWN //
+	$('.dropdown').on('hide.bs.dropdown', function(e){
+		$(this).find('.dropdown-menu').first().stop(true, true).slideUp();
+	});
+	// CONTACT INFO SLIDE
+	$('.slide-toggle').click(function(){
+		$('.slider-contact-info').stop().animate({
+			width: 'toggle'
+		});
+	});
 });
 
