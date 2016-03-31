@@ -61,11 +61,37 @@ html {
   font-size: 14px;
 }
 .btn-lg {
+  display: inline-block;
   font-size: 3em;
   color: #fff;
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
   font-weight: 700;
+  border: 0;
+  background: #F2B305;
+  padding: 10px 15px;
+  position: relative;
+  border-radius: 0;
+  @include effect_bg;
+  &:hover, &:active, &:focus {
+    @include effect_bg;
+    background: #E14335;
+    color: #fff;
+    text-decoration: none;
+  }
+  .icon {
+    background: #999999;
+    height: 76px;
+    position: absolute;
+    right: -76px;
+    top: 0;
+    width: 76px;
+    text-align: center;
+    padding-top: 11px;
+    .arrow-right {
+      width: 25px;
+    }
+  }
 }
 .btn-md {
   font-size: 2.143em;
@@ -298,9 +324,10 @@ html {
         color: #fff;
         font-size: 6em;
         font-weight: 700;
+        line-height: 1.2em;
       }
       .btn-lg {
-    
+        margin-top: 25px;
       }
     }
   }
