@@ -32,5 +32,14 @@ $(document).ready(function(){
 			width: 'toggle'
 		});
 	});
+	// SLIDEUP BLOG POST
+	$('.wrapper-info-post').mouseenter(function(){
+		$(this).find('.info-post').stop().animate({height: "100%"});
+		$(this).find('.icon-post').removeClass('more');
+	});	
+	$('.wrapper-info-post').mouseleave(function(){
+		$(this).find('.info-post').stop().animate({height: "28%"},  1000, function() {});
+		$(this).find('.icon-post').addClass('more');
+	});
 });
 
