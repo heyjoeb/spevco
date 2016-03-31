@@ -25,5 +25,11 @@ $(document).ready(function(){
   	$('.dropdown').on('hide.bs.dropdown', function(e){
     	$(this).find('.dropdown-menu').first().stop(true, true).slideUp();
   	});
+  	// CONTACT INFO SLIDE
+  	$('.slide-toggle').click(function(){
+        $('.slider-contact-info').stop().animate({
+        	width: 'toggle'
+        });
+    });
 });
 

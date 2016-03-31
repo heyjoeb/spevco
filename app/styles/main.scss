@@ -88,6 +88,16 @@ html {
   .bx-wrapper .bx-controls-direction a {
     z-index: 5;
   }
+  .bx-wrapper .bx-pager.bx-default-pager a {
+    background: #B2B2B2;
+    border: solid 2px #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+  .bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {
+    background: #E14335;
+  }
 }
 // -------------------------------  HOME
 .spevco {
@@ -216,7 +226,7 @@ html {
       right: 0;
       top: 30%;
       background: #E14335;
-      z-index: 2;
+      z-index: 3;
       @include effect_bg;
       &:hover, &:active, &:focus, &.active {
         background: #F5BD47;
@@ -225,12 +235,17 @@ html {
     }
     .slider-contact-info {
       position: absolute;
-      right: 60px;
+      right: 50px;
       top:30%;
+      display: none;
       background: rgba(0,0,0,0.5);
       height: 349px;
       width: 500px;
       color: #fff;
+      z-index: 2;
+      &.active {
+        right: 60px;
+      }
       h2 {
         background: rgba(0,0,0,0.5);
         text-transform: uppercase;
@@ -240,6 +255,7 @@ html {
         margin: 0;
         padding-top: 15px;
         padding-left: 30px;
+        white-space: nowrap;
         border-left: solid 4px #E14335;
         padding-bottom: 15px;
       }
@@ -247,6 +263,7 @@ html {
         padding: 20px 5px 15px 30px;
         span {
           float: left;
+          white-space: nowrap;
         }
       }
       ul {
@@ -265,6 +282,8 @@ html {
       }
       .info-contact {
         margin-top: 7px;
+        white-space: nowrap;
+        overflow: hidden;
         &.single-line {
           margin-top: 20px;
         }
