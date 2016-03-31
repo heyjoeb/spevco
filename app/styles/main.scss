@@ -56,7 +56,7 @@ $icon-font-path: '../fonts/';
 
 
 // -------------------------------  MAIN
-html {
+html, body {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
 }
@@ -67,7 +67,6 @@ html {
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
   font-weight: 700;
-  border: 0;
   background: #F2B305;
   padding: 10px 15px;
   position: relative;
@@ -99,6 +98,31 @@ html {
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
   font-weight: 700;
+  background: #F2B305;
+  padding: 10px 15px;
+  position: relative;
+  border-radius: 0;
+  display: inline-block;
+  @include effect_bg;
+  &:hover, &:active, &:focus {
+    @include effect_bg;
+    background: #E14335;
+    color: #fff;
+    text-decoration: none;
+  }
+  .icon {
+    background: #999999;
+    height: 63px;
+    position: absolute;
+    right: -63px;
+    top: 0;
+    width: 63px;
+    text-align: center;
+    padding-top: 11px;
+    .arrow-right {
+      width: 16px;
+    }
+  }
 }
 .txt-bold {
   font-weight: 600;
@@ -123,6 +147,13 @@ html {
   }
   .bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {
     background: #E14335;
+  }
+  .section-title {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 40px;
   }
 }
 // -------------------------------  HOME
@@ -333,6 +364,18 @@ html {
   }
   // customer-stories
   .customer-stories {
+    padding: 100px 0;
+    .bx-wrapper {
+      margin-bottom: 20px;
+    }
+    .bx-wrapper .bx-controls-direction a {
+      top: auto;
+      bottom: -85px;
+    }
+    .section-title {
+      text-align: center;
+      color: #575757;
+    }
     .bx-wrapper {
       background: transparent;
     }
@@ -362,12 +405,21 @@ html {
       }
       .info-story {
         color: #fff;
-        padding: 0;
+        padding: 90px 50px;
         text-align: center;
+        .btn-md {
+          margin-right: 63px;
+          margin-top: 20px;
+        }
       }
       .logo-story {
+        width: 200px;
+        margin-bottom: 30px;
+        margin-left: auto;
+        margin-right: auto;
         img {
           display: inline-block;
+          max-width: 100%;
         }
       }
     }
