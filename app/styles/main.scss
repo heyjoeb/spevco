@@ -823,14 +823,127 @@ html, body {
   }
   // main-footer
   .main-footer {
-    padding-top: 100px;
+    padding-top: 80px;
     overflow: hidden;
     color: #fff;
     background: #1D1D1B;
+    h3 {
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 30px;
+      font-size: 1.4em;
+    }
+    .footer-links {
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+      li {
+        margin-bottom: 15px;
+        &::before {
+          content: '>';
+          color: #E14335;
+          padding-right: 10px;
+        }
+      }
+      a {
+        color: #fff;
+        @include effect_color;
+        &:hover {
+          color: #F2B305;
+          text-decoration: none;
+          @include effect_color;
+        }
+      }
+    }
+    .recent-news {
+      .wrapper-post-news {
+        overflow: hidden;
+        margin-bottom: 20px;
+        a {
+          color: #fff;
+          float: left;
+          width: 90%;
+          @include effect_color;
+          &:hover {
+            color: #F2B305;
+            text-decoration: none;
+            @include effect_color;
+          }
+        }
+        img {
+          float: left;
+          margin-right: 10px;
+        }
+        .info-post-news {
+          margin-top: 20px;
+          overflow: hidden;
+          span {
+            color: #E14335;
+            padding-right: 15px;
+            float: left;
+            width: 5%;
+            display: block;
+          }
+        }
+      }
+    }
+    .info-contact {
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+      li {
+        margin-bottom: 15px;
+        overflow: hidden;
+      }
+      .icon-arrow {
+        color: #E14335;
+        padding-right: 15px;
+        float: left;
+        width: 5%;
+        display: block;
+      }
+      .txt {
+        float: left;
+        width: 90%;
+      }
+    }
+    .social-links {
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+      li {
+        margin-bottom: 20px;
+        margin-right: 20px;
+        display: inline-block;
+      }
+      a {
+        display: block;
+        width: 50px;
+        height: 50px;
+        background: #949494;
+        line-height: 65px;
+        text-align: center;
+        @include effect_bg;
+        &:hover {
+          background: #E14335;
+          @include effect_bg;
+        }
+        svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
     .legal {
       background: #3C3C3C;
-      margin-top: 100px;
+      margin-top: 80px;
+      padding: 10px 0;
       text-align: center;
+      font-size: 0.8em;
     }
   }
   
