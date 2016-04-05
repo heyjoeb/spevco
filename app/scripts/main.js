@@ -41,5 +41,15 @@ $(document).ready(function(){
 		$(this).find('.info-post').stop().animate({height: '28%'}, 1000, function() {});
 		$(this).find('.icon-post').addClass('more');
 	});
+	// PARALLAX - SCROLLMAGIC
+	// init controller
+	var controller = new ScrollMagic.Controller();
+	// build tween
+	var tween = TweenMax.staggerFromTo("#animate1", 2, {left: 700}, {left: 220, opacity:1, ease: Back.easeOut}, 0.15);
+
+	// build scene
+	var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 300})
+					.setTween(tween)
+					.addTo(controller);
 });
 
