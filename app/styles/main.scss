@@ -159,6 +159,9 @@ html, body {
     font-weight: 700;
     margin-bottom: 40px;
     line-height: 1.3em;
+    @include breakpoint(xs) { 
+      font-size: 1.8em;
+    } 
   }
   .txt-italic {
     font-style: italic;
@@ -200,6 +203,7 @@ html, body {
   .main-nav {
     background: rgba(255, 255, 255, 0.65);
     border-left: 5px solid #e14335;
+    top: -110px;
   }
   .navbar-brand {
     width: 229px;
@@ -413,6 +417,20 @@ html, body {
     .section-title {
       text-align: center;
       color: #575757;
+      width: 785px;
+      left: 700px;
+      display: inline-block;
+      position: relative;
+      opacity: 0;
+      margin-left: -392.5px;
+      @include breakpoint(md) { 
+        width: 500px;
+        margin-left: -250px;
+      } 
+      @include breakpoint(xs) { 
+        width: 300px;
+        margin-left: -150px;
+      } 
     }
     .bx-wrapper {
       background: transparent;
@@ -477,12 +495,69 @@ html, body {
       left: 0;
       bottom: 17.5%;
       width: 45%;
+      z-index: 1;
     }
     .info-learn {
+      position: relative;
+      z-index: 1;
+      .section-title {
+        left: -100px;
+        display: inline-block;
+        position: relative;
+        opacity: 0;
+        @include breakpoint(md) { 
+        } 
+        @include breakpoint(xs) { 
+        } 
+      }
       h2 {
         padding-left: 20px;
         border-left: solid 4px #E14335;
       }
+    }
+    .video-learn {
+      position: relative;
+      z-index: 1;
+    }
+    #parallaxRocket {
+      padding-bottom: 0;
+      position: absolute;
+      z-index: 0;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      padding-bottom: 0;
+    }
+    .layerClouds {
+      background: url('/images/clouds.png');
+      height: 510px;
+      width: 1366px;
+      background-size: cover;
+      position: absolute;
+    }
+    .layerRocket {
+      background: url('/images/rocket.png');
+      width: 545px;
+      height: 451px;
+      position: absolute;
+      animation: bobble 4s infinite;
+      margin-top: 0px;
+      margin-left: 0%;
+      top: 0;
+    }
+    @keyframes bobble {
+        0% {
+            transform: translate3d(50px, 40px, 0px);
+            animation-timing-function: ease-in;
+        }
+        50% {
+            transform: translate3d(50px, 50px, 0px);
+            animation-timing-function: ease-out;
+        }
+        100% {
+            transform: translate3d(50px, 40px, 0px);
+        }
     }
   }
 
@@ -492,15 +567,29 @@ html, body {
     position: relative;
     color: #fff;
     padding: 100px 0 65px;
+    .section-title {
+      text-align: center;
+      width: 785px;
+      left: 700px;
+      display: inline-block;
+      position: relative;
+      opacity: 0;
+      margin-left: -392.5px;
+      @include breakpoint(md) { 
+        width: 500px;
+        margin-left: -250px;
+      } 
+      @include breakpoint(xs) { 
+        width: 300px;
+        margin-left: -150px;
+      } 
+    }
     .container-process-slider {
       position: relative;
       z-index: 1;
       .bx-wrapper {
         background: transparent;
       }
-    }
-    h2 {
-      text-align: center;
     }
     .process-slider {
       li {
@@ -512,6 +601,9 @@ html, body {
     }
     .process-pager {
       text-align: center;
+      opacity: 0;
+      position: relative;
+      bottom: -100px;
       a {
         display: inline-block;
         margin: 0 20px;
@@ -564,9 +656,23 @@ html, body {
     overflow: hidden;
     padding: 100px 0;
     .section-title {
+      margin-top: 0;
       text-align: center;
       color: #575757;
-      margin-top: 0;
+      width: 785px;
+      left: 700px;
+      position: relative;
+      opacity: 0;
+      margin-left: -392.5px;
+      display: block;
+      @include breakpoint(md) { 
+        width: 500px;
+        margin-left: -250px;
+      } 
+      @include breakpoint(xs) { 
+        width: 300px;
+        margin-left: -150px;
+      } 
     }
     .blog-post {
       margin-bottom: 35px;
@@ -648,6 +754,14 @@ html, body {
       border-left: 4px solid #e14335;
       padding-left: 20px;
       margin-top: 0;
+      left: -100px;
+      display: inline-block;
+      position: relative;
+      opacity: 0;
+      @include breakpoint(md) { 
+      } 
+      @include breakpoint(xs) { 
+      } 
     }
     .txt-italic {
       margin-bottom: 20px;
@@ -724,6 +838,9 @@ html, body {
     .logo-footer {
       text-align: center;
       margin-bottom: 20px;
+      opacity: 0;
+      position: relative;
+      bottom: -100px;
       img {
         width: 160px;
       }
@@ -917,6 +1034,18 @@ html, body {
       ul {
         list-style-type: none;
         padding-left: 0;
+        text-align: center;
+        left: 700px;
+        position: relative;
+        opacity: 0;
+        @include breakpoint(md) { 
+          width: 500px;
+          margin-left: -250px;
+        } 
+        @include breakpoint(xs) { 
+          width: 300px;
+          margin-left: -150px;
+        } 
       }
       li {
         margin-bottom: 20px;
