@@ -78,12 +78,16 @@ html, body {
   @include effect_bg;
   &:hover, &:active, &:focus {
     @include effect_bg;
-    background: #E14335;
+    background: #02aae6;
     color: #fff;
     text-decoration: none;
+    .icon {
+      @include effect_bg;
+      background: #c6c6c6;
+    }
   }
   .icon {
-    background: #999999;
+    background: #9d9d9d;
     height: 76px;
     position: absolute;
     right: -76px;
@@ -110,12 +114,17 @@ html, body {
   @include effect_bg;
   &:hover, &:active, &:focus {
     @include effect_bg;
-    background: #E14335;
+    background: #02aae6;
     color: #fff;
     text-decoration: none;
+    .icon {
+      @include effect_bg;
+      background: #c6c6c6;
+    }
   }
   .icon {
-    background: #999999;
+    @include effect_bg;
+    background: #9d9d9d;
     height: 63px;
     position: absolute;
     right: -63px;
@@ -150,7 +159,7 @@ html, body {
     border-radius: 50%;
   }
   .bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {
-    background: #E14335;
+    background: #ff4335;
   }
   .section-title {
     font-family: 'Oswald', sans-serif;
@@ -191,7 +200,7 @@ html, body {
       font-size: 1.2em;
       @include effect_bg;
       &:hover, &:focus, &:active {
-        background: #E14335;
+        background: #02aae6;
         @include effect_bg;
       }
     }
@@ -202,7 +211,7 @@ html, body {
   // navbar
   .main-nav {
     background: rgba(255, 255, 255, 0.65);
-    border-left: 5px solid #e14335;
+    border-left: 5px solid #ff4335;
     top: -110px;
   }
   .navbar-brand {
@@ -226,10 +235,10 @@ html, body {
     font-weight: 700;
     a {
       color: #575757;
-      border-left: 3px solid #e14335;
+      border-left: 3px solid #ff4335;
       @include effect_bg;
       &:hover, &:active, &:focus {
-        background: #E14335;
+        background: #ff4335;
         color: #fff;
         @include effect_bg;
       }
@@ -249,7 +258,7 @@ html, body {
         a {
           border-left: 0;
           padding: 15px 0;
-          border-bottom: solid 1px #E14335;
+          border-bottom: solid 1px #ff4335;
           font-weight: 400;
         }
       }
@@ -262,14 +271,24 @@ html, body {
     a {
       border: 0;
       color: #fff;
-      background: #F5BD47;
+      background: #f2b305;
       padding: 10px 15px;
       position: relative;
+      @include effect_bg;
+      &:hover, &:active, &:focus {
+        background: #02aae6;
+        color: #fff;
+        @include effect_bg;
+        .icon {
+          @include effect_bg;
+          background: #c6c6c6;
+        }
+      }
       .txt {
         font-size: 1.5em;
       }
       .icon {
-        background: #999999;
+        background: #9d9d9d;
         height: 64px;
         position: absolute;
         right: -64px;
@@ -324,11 +343,11 @@ html, body {
       position: fixed;
       right: 0;
       top: 30%;
-      background: #E14335;
+      background: #ff4335;
       z-index: 3;
       @include effect_bg;
       &:hover, &:active, &:focus, &.active {
-        background: #F5BD47;
+        background: #02aae6;
         @include effect_bg;
       }
     }
@@ -355,7 +374,7 @@ html, body {
         padding-top: 15px;
         padding-left: 30px;
         white-space: nowrap;
-        border-left: solid 4px #E14335;
+        border-left: solid 4px #ff4335;
         padding-bottom: 15px;
       }
       .wrapper-slider-contact-info {
@@ -515,7 +534,7 @@ html, body {
       }
       h2 {
         padding-left: 20px;
-        border-left: solid 4px #E14335;
+        border-left: solid 4px #ff4335;
       }
     }
     .video-learn {
@@ -611,6 +630,27 @@ html, body {
       opacity: 0;
       position: relative;
       bottom: -100px;
+      .st10 {
+        fill: #fff;
+      }
+      .st9 {
+        fill: #fff;
+      }
+      .st8 {
+        fill: #fff;
+      }
+      .st7 {
+        fill: #fff;
+      }
+      .st6 {
+        fill:none;
+        stroke:#FFFFFF;
+        stroke-width:3.6527;
+        stroke-miterlimit:10;
+      }
+      .st5 {
+        fill: #fff;
+      }
       a {
         display: inline-block;
         margin: 0 20px;
@@ -621,7 +661,25 @@ html, body {
         &.active, &:hover {
           .icon {
             @include effect_bg;
-            background: #F2B305;
+            background: #f2b305;
+          }
+          .st10 {
+            fill: #1d1d1b;
+          }
+          .st9 {
+            fill: #1d1d1b;
+          }
+          .st8 {
+            fill: #1d1d1b;
+          }
+          .st7 {
+            fill: #1d1d1b;
+          }
+          .st6 {
+            stroke:#1d1d1b;
+          }
+          .st5 {
+            fill: #1d1d1b;
           }
         }
         .icon {
@@ -719,12 +777,15 @@ html, body {
       .btn-md {
         font-size: 1.2em;
         margin-top: 15px;
-        background: #999999;
+        background: #f2b305;
         &:hover {
-          background: #F2B305;
+          background: #02aae6;
+          .icon {
+            background: #c6c6c6;
+          }
         }
         .icon {
-          background: #F2B305;
+          background: #9d9d9d;
           height: 44px;
           width: 44px;
           right: -44px;
@@ -763,7 +824,7 @@ html, body {
     color: #fff;
     overflow: hidden;
     .section-title {
-      border-left: 4px solid #e14335;
+      border-left: 4px solid #ff4335;
       padding-left: 20px;
       margin-top: 0;
       left: -100px;
@@ -821,7 +882,7 @@ html, body {
       h3 {
         font-family: 'Oswald', sans-serif;
         text-transform: uppercase;
-        border-left: 4px solid #e14335;
+        border-left: 4px solid #ff4335;
         padding-left: 20px;
         font-weight: 700;
         padding-top: 15px;
@@ -882,7 +943,7 @@ html, body {
       a {
         font-family: 'Oswald', sans-serif;
         text-transform: uppercase;
-        border-left: 3px solid #e14335;
+        border-left: 3px solid #ff4335;
         padding: 10px;
         font-weight: 700;
         color: #575757;
@@ -890,7 +951,7 @@ html, body {
         background: transparent;
         @include effect_bg;
         &:hover, &:focus, &:active {
-          background: #E14335;
+          background: #ff4335;
           color: #fff;
           text-decoration: none;
           @include effect_bg;
@@ -944,11 +1005,15 @@ html, body {
         padding-right: 45px;
         @include effect_bg;
         &:hover, &:active, &:focus {
-          background: #E14335;
+          background: #02aae6;
           @include effect_bg;
+          .icon {
+            @include effect_bg;
+            background: #c6c6c6;
+          }
         }
         .icon {
-          background: #999999;
+          background: #9d9d9d;
           height: 34px;
           width: 34px;
           line-height: 34px;
@@ -984,7 +1049,7 @@ html, body {
         margin-bottom: 15px;
         &::before {
           content: '>';
-          color: #E14335;
+          color: #ff4335;
           padding-right: 10px;
         }
       }
@@ -1028,7 +1093,7 @@ html, body {
           margin-top: 20px;
           overflow: hidden;
           span {
-            color: #E14335;
+            color: #ff4335;
             padding-right: 15px;
             float: left;
             width: 5%;
@@ -1047,7 +1112,7 @@ html, body {
         overflow: hidden;
       }
       .icon-arrow {
-        color: #E14335;
+        color: #ff4335;
         padding-right: 15px;
         float: left;
         width: 5%;
@@ -1089,7 +1154,7 @@ html, body {
         text-align: center;
         @include effect_bg;
         &:hover {
-          background: #E14335;
+          background: #ff4335;
           @include effect_bg;
         }
         svg {
