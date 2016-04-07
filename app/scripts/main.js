@@ -4,6 +4,15 @@
 $(document).ready(function(){
 	/* jshint strict: false */
 	/*jshint camelcase: false */
+	// PRELOADER
+	$('#main').imagesLoaded( { background: true }, function() {
+		setTimeout(function(){
+	        $('body').addClass('loaded');
+	        // ANIMATE MENU
+			var siteNav = $('#siteNav');
+			TweenLite.to(siteNav, 0.5, {top: 0, delay: 1});
+	    }, 5000);
+	});
 	// sliders
 	$('.main-slider').bxSlider({
 		controls: false
@@ -43,9 +52,6 @@ $(document).ready(function(){
 		$(this).find('.info-post').stop().animate({height: '28%'}, 1000, function() {});
 		$(this).find('.icon-post').addClass('more');
 	});
-	// ANIMATE MENU
-	var siteNav = $('#siteNav');
-	TweenLite.to(siteNav, 0.5, {top: 0, delay: 4});
 	// PARALLAX - SCROLLMAGIC
 	// init controller
 	var controller = new ScrollMagic.Controller();

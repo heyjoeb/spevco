@@ -12,7 +12,6 @@
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="/bower_components/bxslider-4/dist/jquery.bxslider.css" />
-    <link rel="stylesheet" href="/bower_components/fakeLoader/fakeLoader.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,600italic,300|Oswald:400,300,700' rel='stylesheet' type='text/css'>
@@ -25,10 +24,24 @@
     <!-- endbuild -->
   </head>
   <body>
-  <div id="fakeLoader"></div>
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    <div id="loader-wrapper">
+        <div id="loader">
+          <div class="entry-title">
+            <img src="images/copy-preloader.png" alt="">
+          </div>
+          <div class="loader-rocket">
+            <img src="images/loader-rocket.png" alt="">
+          </div>
+          <div class="loader-rocket-smoke">
+            <img src="images/loader-rocket-smoke.png" alt="">
+          </div>
+        </div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
     
     <div class="spevco">
       <!-- Fixed navbar -->
@@ -656,14 +669,14 @@
     
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
-     <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/bxslider-4/dist/jquery.bxslider.js"></script>
     <script src="/bower_components/jquery.fitvids/jquery.fitvids.js"></script>
     <script src="/bower_components/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js"></script>
     <script src="/bower_components/gsap/src/uncompressed/TweenMax.js"></script>
     <script src="/bower_components/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
     <script src="/bower_components/enquire/dist/enquire.js"></script>
-    <script src="/bower_components/fakeLoader/fakeLoader.js"></script>
+    <script src="/bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     
@@ -756,15 +769,6 @@
                   //Fin Mapa
                 }
             initialize()
-        </script>
-        <script>
-          $('#fakeLoader').fakeLoader({
-            timeToHide:4000, //Time in milliseconds for fakeLoader disappear
-            zIndex:'9999',//Default zIndex
-            spinner:'spinner6',//Options: 'spinner1', 'spinner2', 'spinner3', 'spinner4', 'spinner5', 'spinner6', 'spinner7'
-            bgColor:'#E14335', //Hex, RGB or RGBA colors
-            //imagePath:"yourPath/customizedImage.gif" //If you want can you insert your custom image
-          });
         </script>
   </body>
 </html>
