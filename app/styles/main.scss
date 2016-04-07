@@ -321,7 +321,7 @@ html, body {
       width: auto;
     }
     .btn-contact {
-      position: absolute;
+      position: fixed;
       right: 0;
       top: 30%;
       background: #E14335;
@@ -333,7 +333,7 @@ html, body {
       }
     }
     .slider-contact-info {
-      position: absolute;
+      position: fixed;
       right: 50px;
       top:30%;
       display: none;
@@ -406,7 +406,7 @@ html, body {
   }
   // customer-stories
   .customer-stories {
-    padding: 100px 0;
+    padding: 70px 0 100px;
     .bx-wrapper {
       margin-bottom: 20px;
     }
@@ -441,8 +441,11 @@ html, body {
         display: inline-block;
         margin: 0 20px;
         width: 100px;
-        &.active {
-          opacity: 0.5;
+        opacity: 0.5;
+        @include effect_opacity;
+        &:hover, &.active {
+          opacity: 1;
+          @include effect_opacity;
         }
         img {
           max-width: 100%;
@@ -535,6 +538,8 @@ html, body {
       width: 1366px;
       background-size: cover;
       position: absolute;
+      opacity: 0;
+      top: -300px;
     }
     .layerRocket {
       background: url('/images/rocket.png');
@@ -544,7 +549,9 @@ html, body {
       animation: bobble 4s infinite;
       margin-top: 0px;
       margin-left: 0%;
-      top: 0;
+      opacity: 0;
+      bottom: -300px;
+      left: -300px;
     }
     @keyframes bobble {
         0% {
@@ -566,7 +573,7 @@ html, body {
     overflow: hidden;
     position: relative;
     color: #fff;
-    padding: 100px 0 65px;
+    padding: 70px 0 65px;
     .section-title {
       text-align: center;
       width: 785px;
@@ -594,7 +601,7 @@ html, body {
     .process-slider {
       li {
         p {
-          width: 70%;
+          width: 85%;
           margin: 0 auto;
         }
       }
@@ -682,6 +689,7 @@ html, body {
       overflow: hidden;
       background-size: cover;
       position: relative;
+      background-position: center;
     }
     .info-post {
       position: absolute;
@@ -692,6 +700,10 @@ html, body {
       color: #fff;
       padding: 20px;
       width: 100%;
+      p {
+        max-height: 120px;
+        overflow: hidden;
+      }
       time {
         font-size: 0.9em;
         font-family: 'Open Sans', sans-serif;
@@ -825,6 +837,15 @@ html, body {
       ul {
         list-style-type: none;
         padding-left: 0;
+      }
+    }
+    .map-content {
+      color: #515559;
+      .firstHeading {
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1.8em;
       }
     }
     #mapCanvas {
@@ -981,20 +1002,27 @@ html, body {
       .wrapper-post-news {
         overflow: hidden;
         margin-bottom: 20px;
+        .img-wrapper {
+          width: 81px;
+          height: 79px;
+          overflow: hidden;
+          float: left;
+          margin-right: 10px;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
         a {
           color: #fff;
           float: left;
           width: 90%;
+          height: 60px;
+          overflow: hidden;
           @include effect_color;
           &:hover {
             color: #F2B305;
             text-decoration: none;
             @include effect_color;
           }
-        }
-        img {
-          float: left;
-          margin-right: 10px;
         }
         .info-post-news {
           margin-top: 20px;
