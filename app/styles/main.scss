@@ -87,6 +87,13 @@ html, body {
       background: #c6c6c6;
     }
   }
+  @include breakpoint(lrg) { 
+    font-size: 2em;
+  } 
+  @include breakpoint(xs) { 
+    font-size: 1.2em;
+    margin-top: 0 !important;
+  } 
   .icon {
     background: #9d9d9d;
     height: 76px;
@@ -96,8 +103,24 @@ html, body {
     width: 76px;
     text-align: center;
     padding-top: 11px;
+    @include breakpoint(lrg) { 
+      height: 57px;
+      width: 57px;
+      right: -57px;
+    } 
+    @include breakpoint(xs) { 
+      height: 42px;
+      width: 42px;
+      right: -42px;
+    } 
     .arrow-right {
       width: 25px;
+      @include breakpoint(lrg) { 
+        width: 16px;
+      } 
+      @include breakpoint(xs) { 
+        width: 12px;
+      } 
     }
   }
 }
@@ -148,6 +171,12 @@ html, body {
   }
   .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
     bottom: 55px;
+    @include breakpoint(sm) { 
+      bottom: 20px;
+    } 
+    @include breakpoint(xs) { 
+      bottom: 5px;
+    } 
   }
   .bx-wrapper .bx-controls-direction a {
     z-index: 5;
@@ -487,6 +516,15 @@ html, body {
       margin-left: 6%;
       margin-top: 15%;
       margin-bottom: 10%;
+      @include breakpoint(lrg) { 
+        margin-top: 18%;
+      } 
+      @include breakpoint(xs) { 
+        margin-top: 25%;
+      } 
+      @include breakpoint(xxs) { 
+        margin-top: 30%;
+      } 
     }
     .container-video {
       position: absolute;
@@ -522,6 +560,9 @@ html, body {
         background: #02aae6;
         @include effect_bg;
       }
+      @include breakpoint(xs) { 
+        display: none;
+      } 
     }
     .slider-contact-info {
       position: fixed;
@@ -536,6 +577,9 @@ html, body {
       &.active {
         right: 60px;
       }
+      @include breakpoint(xs) { 
+        display: none !important;
+      } 
       h2 {
         background: rgba(0,0,0,0.5);
         text-transform: uppercase;
@@ -589,6 +633,15 @@ html, body {
         font-size: 6em;
         font-weight: 700;
         line-height: 1.2em;
+        @include breakpoint(lrg) { 
+          font-size: 4em;
+        } 
+        @include breakpoint(xs) { 
+          font-size: 2.5em;
+        } 
+        @include breakpoint(xxs) { 
+          font-size: 2em;
+        } 
       }
       .btn-lg {
         margin-top: 25px;
