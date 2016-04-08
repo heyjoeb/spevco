@@ -1,4 +1,5 @@
 $icon-font-path: '../fonts/';
+$grid-float-breakpoint: 991px;
 
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
@@ -289,7 +290,7 @@ html, body {
   top: 0;
   width: 51%;
   height: 100%;
-  background: #222222;
+  background: #ff4335;
   z-index: 1050;
 }
 #loader-wrapper .loader-section.section-left {
@@ -335,13 +336,31 @@ html, body {
     background: rgba(255, 255, 255, 0.9);
     border-left: 5px solid #ff4335;
     top: -110px;
+    @include breakpoint(lrg) { 
+      text-align: center;
+    } 
+  }
+  .navbar-header {
+    @include breakpoint(lrg) { 
+      float: none;
+      display: inline-block;
+    } 
+    @include breakpoint(md) { 
+      display: block;
+    } 
   }
   .navbar-brand {
     width: 229px;
     height: auto;
     padding-top: 27px;
     margin-right: 35px;
+    margin-left: 10px !important;
     @include effect_opacity;
+    @include breakpoint(lrg) { 
+      padding-top: 15px;
+      margin-right: 0px;
+      margin-left: 0px !important;
+    } 
     &:hover {
       @include effect_opacity;
       opacity: 0.8;
@@ -355,10 +374,29 @@ html, body {
     text-transform: uppercase;
     padding-top: 27px;
     font-weight: 700;
+    @include breakpoint(lrg) { 
+      padding-top: 0;
+      float: none;
+    } 
+    @include breakpoint(md) { 
+      margin-bottom: 0;
+    } 
+    li {
+      @include breakpoint(lrg) { 
+        display: inline-block;
+        float: none;
+      } 
+      @include breakpoint(md) { 
+        display: block;
+      } 
+    }
     a {
       color: #575757;
       border-left: 3px solid #ff4335;
       @include effect_bg;
+      @include breakpoint(lrg) { 
+        margin-left: -3px;
+      } 
       &:hover, &:active, &:focus {
         background: #ff4335;
         color: #fff;
@@ -371,7 +409,13 @@ html, body {
       text-align: center;
       padding: 0;
       background: rgba(255,255,255, 0.8);
+      @include breakpoint(md) { 
+        width: 100%;
+      } 
       li {
+        @include breakpoint(lrg) { 
+          display: block;
+        } 
         &:last-child {
           a {
             border: 0;
@@ -389,7 +433,7 @@ html, body {
   .navbar-right {
     padding-bottom: 20px;
     padding-top: 20px;
-    margin-right: 65px;
+    margin-right: 85px;
     a {
       border: 0;
       color: #fff;
@@ -422,6 +466,12 @@ html, body {
           width: 20px;
         }
       }
+    }
+  }
+  .navbar-toggle {
+    margin-top: 28px;
+    .icon-bar {
+      background: #ff4335;
     }
   }
   // main-slider
@@ -674,7 +724,7 @@ html, body {
       padding-bottom: 0;
     }
     .layerClouds {
-      background: url('/images/clouds.png');
+      background: url('../images/clouds.png');
       height: 510px;
       width: 1366px;
       background-size: cover;
@@ -683,7 +733,7 @@ html, body {
       top: -300px;
     }
     .layerRocket {
-      background: url('/images/rocket.png');
+      background: url('../images/rocket.png');
       width: 545px;
       height: 451px;
       position: absolute;
@@ -1249,7 +1299,6 @@ html, body {
       ul {
         list-style-type: none;
         padding-left: 0;
-        text-align: center;
         left: 700px;
         position: relative;
         opacity: 0;

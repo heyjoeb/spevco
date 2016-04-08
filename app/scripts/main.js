@@ -7,11 +7,11 @@ $(document).ready(function(){
 	// PRELOADER
 	$('#main').imagesLoaded( { background: true }, function() {
 		setTimeout(function(){
-	        $('body').addClass('loaded');
-	        // ANIMATE MENU
+			$('body').addClass('loaded');
+			// ANIMATE MENU
 			var siteNav = $('#siteNav');
 			TweenLite.to(siteNav, 0.5, {top: 0, delay: 1});
-	    }, 5000);
+		}, 5000);
 	});
 	// sliders
 	$('.main-slider').bxSlider({
