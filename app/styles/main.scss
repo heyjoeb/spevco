@@ -768,6 +768,22 @@ html, body {
       bottom: 17.5%;
       width: 45%;
       z-index: 1;
+      @include breakpoint(lrg) { 
+        bottom: 9.5%;
+      }
+      @include breakpoint(md) { 
+        position: relative;
+        bottom: auto;
+        width: 96%;
+        padding: 30px;
+        margin-left: 15px;
+      }
+      @include breakpoint(sm) { 
+        width: 94%;
+      }
+      @include breakpoint(xxs) { 
+        width: 92%;
+      }
     }
     .info-learn {
       position: relative;
