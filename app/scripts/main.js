@@ -23,7 +23,6 @@ $(document).ready(function(){
 		pause: 7000
 	});
 	$('.process-slider').bxSlider({
-		controls: false,
 		mode: 'fade',
 		pagerCustom: '#animate4'
 	});

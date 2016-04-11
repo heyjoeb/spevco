@@ -882,9 +882,27 @@ html, body {
       .bx-wrapper {
         background: transparent;
       }
+      .bx-controls {
+        @include breakpoint(md) { 
+          display: none;
+        }
+        @include breakpoint(sm) { 
+          display: inline-block;
+        }
+      }
     }
     .process-slider {
+      h3 {
+        display: none;
+        text-align: center;
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase;
+        @include breakpoint(sm) { 
+          display: block;
+        }
+      }
       li {
+        z-index: 1 !important;
         p {
           width: 85%;
           margin: 0 auto;
@@ -896,6 +914,9 @@ html, body {
       opacity: 0;
       position: relative;
       bottom: -100px;
+      @include breakpoint(sm) { 
+        display: none;
+      }
       .st10 {
         fill: #fff;
       }
@@ -954,10 +975,18 @@ html, body {
           width: 140px;
           border-radius: 50%;
           line-height: 140px;
+          @include breakpoint(md) { 
+            height: 100px;
+            width: 100px;
+            line-height: 100px;
+          }
         }
         .svg-icon {
           width: 62px;
           vertical-align: middle;
+          @include breakpoint(md) { 
+            width: 40px;
+          }
         }
       }
       .text {
@@ -1024,9 +1053,19 @@ html, body {
       color: #fff;
       padding: 20px;
       width: 100%;
+      @include breakpoint(lrg) { 
+        padding-top: 5px;
+      }
+      @include breakpoint(sm) { 
+        padding-top: 20px;
+      }
       p {
         max-height: 120px;
         overflow: hidden;
+        @include breakpoint(xs) { 
+          max-height: 80px;
+          text-overflow:ellipsis
+        }
       }
       time {
         font-size: 0.9em;
