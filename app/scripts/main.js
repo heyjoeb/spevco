@@ -1,4 +1,4 @@
-/* global $, e, ScrollMagic, Linear, TimelineMax, Back, TweenMax, TweenLite  */
+/* global $, e, ScrollMagic, enquire, Linear, TimelineMax, Back, TweenMax, TweenLite  */
 /*eslint-disable no-unused-vars*/
 'use strict';
 $(document).ready(function(){
@@ -52,11 +52,9 @@ $(document).ready(function(){
 		$(this).find('.icon-post').addClass('more');
 	});
 	// PARALLAX - SCROLLMAGIC
-	enquire.register("screen and (min-width:992px)", {
-	    // OPTIONAL
-	    // If supplied, triggered when a media query matches.
-	    match : function() {
-	    	// init controller
+	enquire.register('screen and (min-width:992px)', {
+		match: function() {
+			// init controller
 			var controller = new ScrollMagic.Controller();
 			// build tween
 			var tween = TweenMax.staggerFromTo('#animate1', 2, {left: 700}, {left: '50%', opacity: 1, ease: Back.easeOut}, 0.15);
@@ -67,9 +65,8 @@ $(document).ready(function(){
 			var tween6 = TweenMax.staggerFromTo('#animate6', 2, {left: -100}, {left: '0', opacity: 1, ease: Back.easeOut}, 0.15);
 			var tween7 = TweenMax.staggerFromTo('#animate7', 2, {bottom: -100}, {bottom: 0, opacity: 1, ease: Back.easeOut}, 0.15);
 			var tween8 = TweenMax.staggerFromTo('#animate8', 2, {left: 700}, {left: '0', opacity: 1, ease: Back.easeOut}, 0.15);
-		    var tween9 = TweenMax.staggerFromTo('#animate9', 2, {top: -300}, {top: 0, opacity: 1, ease: Back.easeOut}, 0.15);
+			var tween9 = TweenMax.staggerFromTo('#animate9', 2, {top: -300}, {top: 0, opacity: 1, ease: Back.easeOut}, 0.15);
 			var tween10 = TweenMax.staggerFromTo('#animate10', 2, {bottom: -300, left: -300}, {bottom: 0, left: 0, opacity: 1, ease: Back.easeOut}, 0.15);
-
 			// build scene
 			var scene = new ScrollMagic.Scene({triggerElement: '#trigger1', duration: 300})
 							.setTween(tween)
@@ -101,7 +98,6 @@ $(document).ready(function(){
 			var scene10 = new ScrollMagic.Scene({triggerElement: '#trigger10', duration: 300})
 							.setTween(tween10)
 							.addTo(controller);
-		}      
+		}
 	});
 });
-
