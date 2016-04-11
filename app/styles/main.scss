@@ -1064,7 +1064,7 @@ html, body {
         overflow: hidden;
         @include breakpoint(xs) { 
           max-height: 80px;
-          text-overflow:ellipsis
+          text-overflow:ellipsis;
         }
       }
       time {
@@ -1146,6 +1146,9 @@ html, body {
     }
     .container-contact-form {
       margin-right: 50px;
+      @include breakpoint(md) { 
+        margin-right: 0;
+      }
       .last {
         position: relative;
       }
@@ -1168,6 +1171,15 @@ html, body {
         float: left;
         margin-right: 15px;
         width: 46px;
+        @include breakpoint(lrg) { 
+          display: none;
+        }
+        @include breakpoint(md) { 
+         display: block;
+        }
+        @include breakpoint(xs) { 
+         display: none;
+        }
       }
       .info-contact {
         float: left;
@@ -1239,12 +1251,22 @@ html, body {
     li {
       display: inline-block;
       margin-right: -4px;
+      @include breakpoint(sm) { 
+        width: 50%;
+      }
+      @include breakpoint(xxs) { 
+        width: 100%;
+      }
     }
     .sign-up-links {
       padding-top: 40px;
       margin-top: 30px;
       border-top: solid 1px #1D1D1B;
       padding-left: 0;
+      @include breakpoint(lrg) { 
+        text-align: center;
+        padding-left: 15px;
+      }
       a {
         font-family: 'Oswald', sans-serif;
         text-transform: uppercase;
@@ -1261,6 +1283,9 @@ html, body {
           text-decoration: none;
           @include effect_bg;
         }
+        @include breakpoint(sm) { 
+          border: 0;
+        }
       }
     }
     .sign-up-form {
@@ -1268,6 +1293,15 @@ html, body {
       margin-top: 30px;
       border-top: solid 1px #1D1D1B;
       padding-right: 0;
+      @include breakpoint(lrg) { 
+        border: 0;
+        padding-top: 0;
+        padding-right: 15px;
+      }
+      @include breakpoint(xs) { 
+        width: 100%;
+        margin-left: 0;
+      }
       .form-group {
         width: 100%;
         overflow: hidden;
@@ -1297,6 +1331,19 @@ html, body {
         position: absolute;
         right: 0;
         bottom: 0;
+        @include breakpoint(sm) { 
+          bottom: auto;
+          top: 0;
+        }
+        @include breakpoint(xs) { 
+          right: 15px;
+        }
+        @include breakpoint(xxs) { 
+          position: relative;
+          right: auto;
+          text-align: center;
+          margin-top: 15px;
+        }
       }
       .btn-send {
         background: #F2B305;

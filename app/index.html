@@ -541,12 +541,12 @@
       <div class="sign-up">
         <div class="container">
           <div class="row">
-            <div class="col-md-12 logo-footer" id="animate7">
+            <div class="col-md-12 col-lg-12 logo-footer" id="animate7">
               <img src="images/logo-footer-spevco.png" alt="">
             </div><!-- /logo-footer -->
-            <div class="col-md-12 container-sign-up">
+            <div class="col-md-12 col-lg-12 container-sign-up">
               <div class="row">
-                <div class="col-md-7 sign-up-links">
+                <div class="col-md-12 col-lg-7 sign-up-links">
                   <ul>
                     <li><a href="">Mobile Marketing Vehicles</a></li>
                     <li><a href="">Emergency Vehicles</a></li>
@@ -554,7 +554,7 @@
                     <li><a href="">Event Schedule</a></li>
                   </ul>
                 </div><!-- /sign-up-links -->
-                <div class="col-md-5 sign-up-form">
+                <div class="col-xs-8 col-xs-offset-2 col-md-6 col-md-offset-3 col-lg-5 col-lg-offset-0 sign-up-form">
                   <form class="form-inline">
                     <div class="form-group">
                       <input type="email" class="form-control"placeholder="Sign up to get news - Enter your email here">
@@ -721,11 +721,11 @@
                     
                     var image = 'images/map-icon-spevco.png';
 
-                    
+                    var isDraggable = $(document).width() > 850 ? true : false; // If document (your website) is wider than 480px, isDraggable = true, else isDraggable = false
                     var mapOptions = {
                       center: new google.maps.LatLng(36.200335, -80.394407),
                       scrollwheel: true,
-                      draggable: true,
+                      draggable: isDraggable,
                       zoom: 15,
                       panControl: false,
                       zoomControl: false,
