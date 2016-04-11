@@ -52,50 +52,56 @@ $(document).ready(function(){
 		$(this).find('.icon-post').addClass('more');
 	});
 	// PARALLAX - SCROLLMAGIC
-	// init controller
-	var controller = new ScrollMagic.Controller();
-	// build tween
-	var tween = TweenMax.staggerFromTo('#animate1', 2, {left: 700}, {left: '50%', opacity: 1, ease: Back.easeOut}, 0.15);
-	var tween2 = TweenMax.staggerFromTo('#animate2', 2, {left: -100}, {left: '0', opacity: 1, ease: Back.easeOut}, 0.15);
-	var tween3 = TweenMax.staggerFromTo('#animate3', 2, {left: 700}, {left: '50%', opacity: 1, ease: Back.easeOut}, 0.15);
-	var tween4 = TweenMax.staggerFromTo('#animate4', 2, {bottom: -100}, {bottom: 0, opacity: 1, ease: Back.easeOut}, 0.15);
-	var tween5 = TweenMax.staggerFromTo('#animate5', 2, {left: 700}, {left: '50%', opacity: 1, ease: Back.easeOut}, 0.15);
-	var tween6 = TweenMax.staggerFromTo('#animate6', 2, {left: -100}, {left: '0', opacity: 1, ease: Back.easeOut}, 0.15);
-	var tween7 = TweenMax.staggerFromTo('#animate7', 2, {bottom: -100}, {bottom: 0, opacity: 1, ease: Back.easeOut}, 0.15);
-	var tween8 = TweenMax.staggerFromTo('#animate8', 2, {left: 700}, {left: '0', opacity: 1, ease: Back.easeOut}, 0.15);
-    var tween9 = TweenMax.staggerFromTo('#animate9', 2, {top: -300}, {top: 0, opacity: 1, ease: Back.easeOut}, 0.15);
-	var tween10 = TweenMax.staggerFromTo('#animate10', 2, {bottom: -300, left: -300}, {bottom: 0, left: 0, opacity: 1, ease: Back.easeOut}, 0.15);
+	enquire.register("screen and (min-width:992px)", {
+	    // OPTIONAL
+	    // If supplied, triggered when a media query matches.
+	    match : function() {
+	    	// init controller
+			var controller = new ScrollMagic.Controller();
+			// build tween
+			var tween = TweenMax.staggerFromTo('#animate1', 2, {left: 700}, {left: '50%', opacity: 1, ease: Back.easeOut}, 0.15);
+			var tween2 = TweenMax.staggerFromTo('#animate2', 2, {left: -100}, {left: '0', opacity: 1, ease: Back.easeOut}, 0.15);
+			var tween3 = TweenMax.staggerFromTo('#animate3', 2, {left: 700}, {left: '50%', opacity: 1, ease: Back.easeOut}, 0.15);
+			var tween4 = TweenMax.staggerFromTo('#animate4', 2, {bottom: -100}, {bottom: 0, opacity: 1, ease: Back.easeOut}, 0.15);
+			var tween5 = TweenMax.staggerFromTo('#animate5', 2, {left: 700}, {left: '50%', opacity: 1, ease: Back.easeOut}, 0.15);
+			var tween6 = TweenMax.staggerFromTo('#animate6', 2, {left: -100}, {left: '0', opacity: 1, ease: Back.easeOut}, 0.15);
+			var tween7 = TweenMax.staggerFromTo('#animate7', 2, {bottom: -100}, {bottom: 0, opacity: 1, ease: Back.easeOut}, 0.15);
+			var tween8 = TweenMax.staggerFromTo('#animate8', 2, {left: 700}, {left: '0', opacity: 1, ease: Back.easeOut}, 0.15);
+		    var tween9 = TweenMax.staggerFromTo('#animate9', 2, {top: -300}, {top: 0, opacity: 1, ease: Back.easeOut}, 0.15);
+			var tween10 = TweenMax.staggerFromTo('#animate10', 2, {bottom: -300, left: -300}, {bottom: 0, left: 0, opacity: 1, ease: Back.easeOut}, 0.15);
 
-	// build scene
-	var scene = new ScrollMagic.Scene({triggerElement: '#trigger1', duration: 300})
-					.setTween(tween)
-					.addTo(controller);
-	var scene2 = new ScrollMagic.Scene({triggerElement: '#trigger2', duration: 300})
-					.setTween(tween2)
-					.addTo(controller);
-	var scene3 = new ScrollMagic.Scene({triggerElement: '#trigger3', duration: 300})
-					.setTween(tween3)
-					.addTo(controller);
-	var scene4 = new ScrollMagic.Scene({triggerElement: '#trigger4', duration: 300})
-					.setTween(tween4)
-					.addTo(controller);
-	var scene5 = new ScrollMagic.Scene({triggerElement: '#trigger5', duration: 300})
-					.setTween(tween5)
-					.addTo(controller);
-	var scene6 = new ScrollMagic.Scene({triggerElement: '#trigger6', duration: 300})
-					.setTween(tween6)
-					.addTo(controller);
-	var scene7 = new ScrollMagic.Scene({triggerElement: '#trigger7', duration: 300})
-					.setTween(tween7)
-					.addTo(controller);
-	var scene8 = new ScrollMagic.Scene({triggerElement: '#trigger8', duration: 300})
-					.setTween(tween8)
-					.addTo(controller);
-	var scene9 = new ScrollMagic.Scene({triggerElement: '#trigger9', duration: 300})
-					.setTween(tween9)
-					.addTo(controller);
-	var scene10 = new ScrollMagic.Scene({triggerElement: '#trigger10', duration: 300})
-					.setTween(tween10)
-					.addTo(controller);
+			// build scene
+			var scene = new ScrollMagic.Scene({triggerElement: '#trigger1', duration: 300})
+							.setTween(tween)
+							.addTo(controller);
+			var scene2 = new ScrollMagic.Scene({triggerElement: '#trigger2', duration: 300})
+							.setTween(tween2)
+							.addTo(controller);
+			var scene3 = new ScrollMagic.Scene({triggerElement: '#trigger3', duration: 300})
+							.setTween(tween3)
+							.addTo(controller);
+			var scene4 = new ScrollMagic.Scene({triggerElement: '#trigger4', duration: 300})
+							.setTween(tween4)
+							.addTo(controller);
+			var scene5 = new ScrollMagic.Scene({triggerElement: '#trigger5', duration: 300})
+							.setTween(tween5)
+							.addTo(controller);
+			var scene6 = new ScrollMagic.Scene({triggerElement: '#trigger6', duration: 300})
+							.setTween(tween6)
+							.addTo(controller);
+			var scene7 = new ScrollMagic.Scene({triggerElement: '#trigger7', duration: 300})
+							.setTween(tween7)
+							.addTo(controller);
+			var scene8 = new ScrollMagic.Scene({triggerElement: '#trigger8', duration: 300})
+							.setTween(tween8)
+							.addTo(controller);
+			var scene9 = new ScrollMagic.Scene({triggerElement: '#trigger9', duration: 300})
+							.setTween(tween9)
+							.addTo(controller);
+			var scene10 = new ScrollMagic.Scene({triggerElement: '#trigger10', duration: 300})
+							.setTween(tween10)
+							.addTo(controller);
+		}      
+	});
 });
 

@@ -686,14 +686,11 @@ html, body {
       opacity: 0;
       margin-left: -392.5px;
       @include breakpoint(md) { 
-        width: 500px;
-        margin-left: -250px;
-      } 
-      @include breakpoint(xs) { 
-        width: 300px;
-        margin-left: -150px;
-        font-size: 2em;
-      } 
+        opacity: 1;
+        left: auto;
+        width: auto;
+        margin-left: 0;
+      }
     }
     .bx-wrapper {
       background: transparent;
@@ -760,6 +757,9 @@ html, body {
     color: #fff;
     padding: 100px 0;
     position: relative;
+    @include breakpoint(md) { 
+      padding: 70px 0;
+    }
     .txt-italic {
       position: absolute;
       background: rgba(0,0,0,0.5);
@@ -794,9 +794,9 @@ html, body {
         position: relative;
         opacity: 0;
         @include breakpoint(md) { 
-        } 
-        @include breakpoint(xs) { 
-        } 
+          opacity: 1;
+          left: auto;
+        }
       }
       h2 {
         padding-left: 20px;
@@ -859,6 +859,9 @@ html, body {
     position: relative;
     color: #fff;
     padding: 70px 0 65px;
+    @include breakpoint(md) { 
+      padding: 70px 0;
+    }
     .section-title {
       text-align: center;
       width: 785px;
@@ -868,17 +871,18 @@ html, body {
       opacity: 0;
       margin-left: -392.5px;
       @include breakpoint(md) { 
-        width: 500px;
-        margin-left: -250px;
-      } 
-      @include breakpoint(xs) { 
-        width: 300px;
-        margin-left: -150px;
-      } 
+        opacity: 1;
+        left: auto;
+        width: auto;
+        margin-left: 0;
+      }
     }
     .container-process-slider {
       position: relative;
       z-index: 1;
+      @include breakpoint(md) { 
+        text-align: center;
+      }
       .bx-wrapper {
         background: transparent;
       }
@@ -899,6 +903,7 @@ html, body {
         text-transform: uppercase;
         @include breakpoint(sm) { 
           display: block;
+          width: 85%;
         }
       }
       li {
@@ -906,6 +911,9 @@ html, body {
         p {
           width: 85%;
           margin: 0 auto;
+          @include breakpoint(md) { 
+            margin: 0;
+          }
         }
       }
     }
@@ -1015,6 +1023,9 @@ html, body {
   .blog-feed {
     overflow: hidden;
     padding: 100px 0;
+    @include breakpoint(md) { 
+      padding: 70px 0;
+    }
     .section-title {
       margin-top: 0;
       text-align: center;
@@ -1026,12 +1037,10 @@ html, body {
       margin-left: -392.5px;
       display: block;
       @include breakpoint(md) { 
-        width: 500px;
-        margin-left: -250px;
-      } 
-      @include breakpoint(xs) { 
-        width: 300px;
-        margin-left: -150px;
+        left: 0;
+        width: auto;
+        opacity: 1;
+        margin-left: 0;
       } 
     }
     .blog-post {
@@ -1128,6 +1137,9 @@ html, body {
     background-size: cover;
     color: #fff;
     overflow: hidden;
+    @include breakpoint(md) { 
+      padding: 70px 0;
+    }
     .section-title {
       border-left: 4px solid #ff4335;
       padding-left: 20px;
@@ -1137,9 +1149,9 @@ html, body {
       position: relative;
       opacity: 0;
       @include breakpoint(md) { 
-      } 
-      @include breakpoint(xs) { 
-      } 
+        opacity: 1;
+        left: auto;
+      }
     }
     .txt-italic {
       margin-bottom: 20px;
@@ -1234,12 +1246,19 @@ html, body {
   // sign-up
   .sign-up {
     padding: 100px 0;
+    @include breakpoint(md) { 
+      padding: 70px 0;
+    }
     .logo-footer {
       text-align: center;
       margin-bottom: 20px;
       opacity: 0;
       position: relative;
       bottom: -100px;
+      @include breakpoint(md) { 
+        opacity: 1;
+        bottom: auto;
+      }
       img {
         width: 160px;
       }
@@ -1385,14 +1404,24 @@ html, body {
     overflow: hidden;
     color: #fff;
     background: #1D1D1B;
+    @include breakpoint(md) { 
+      padding-top: 50px;
+    }
     h3 {
       font-family: 'Oswald', sans-serif;
       text-transform: uppercase;
       font-weight: 700;
       margin-bottom: 30px;
       font-size: 1.4em;
+      @include breakpoint(xs) { 
+        margin-top: 30px;
+      }
     }
     .footer-links {
+      @include breakpoint(xs) { 
+        text-align: center;
+        width: 100%;
+      }
       ul {
         list-style-type: none;
         padding-left: 0;
@@ -1416,9 +1445,19 @@ html, body {
       }
     }
     .recent-news {
+      @include breakpoint(xs) { 
+        text-align: center;
+        width: 100%;
+      }
       .wrapper-post-news {
         overflow: hidden;
         margin-bottom: 20px;
+        @include breakpoint(xs) { 
+          margin-bottom: 30px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
         .img-wrapper {
           width: 81px;
           height: 79px;
@@ -1427,6 +1466,11 @@ html, body {
           margin-right: 10px;
           background-size: cover;
           background-repeat: no-repeat;
+          @include breakpoint(xs) { 
+            float: none;
+            display: inline-block;
+            margin-right: 0;
+          }
         }
         a {
           color: #fff;
@@ -1440,21 +1484,36 @@ html, body {
             text-decoration: none;
             @include effect_color;
           }
+          @include breakpoint(xs) { 
+            float: none;
+            width: 100%;
+          }
         }
         .info-post-news {
           margin-top: 20px;
           overflow: hidden;
+          @include breakpoint(xs) { 
+            margin-top: 10px;
+          }
           span {
             color: #ff4335;
             padding-right: 15px;
             float: left;
             width: 5%;
             display: block;
+            @include breakpoint(xs) { 
+              float: none;
+              display: inline-block;
+            }
           }
         }
       }
     }
     .info-contact {
+      @include breakpoint(xs) { 
+        text-align: center;
+        width: 100%;
+      }
       ul {
         list-style-type: none;
         padding-left: 0;
@@ -1469,13 +1528,26 @@ html, body {
         float: left;
         width: 5%;
         display: block;
+        @include breakpoint(xs) { 
+          float: none;
+          display: inline-block;
+          padding-right: 5px;
+        }
       }
       .txt {
         float: left;
         width: 90%;
+        @include breakpoint(xs) { 
+          float: none;
+          width: 100%;
+        }
       }
     }
     .social-links {
+      @include breakpoint(xs) { 
+        text-align: center;
+        width: 100%;
+      }
       ul {
         list-style-type: none;
         padding-left: 0;
@@ -1483,18 +1555,19 @@ html, body {
         position: relative;
         opacity: 0;
         @include breakpoint(md) { 
-          width: 500px;
-          margin-left: -250px;
+          left: auto;
+          opacity: 1;
         } 
-        @include breakpoint(xs) { 
-          width: 300px;
-          margin-left: -150px;
-        } 
+
       }
       li {
         margin-bottom: 20px;
         margin-right: 20px;
         display: inline-block;
+        @include breakpoint(lrg) { 
+          margin-bottom: 10px;
+          margin-right: 10px;
+        }
       }
       a {
         display: block;
