@@ -67,6 +67,9 @@ $(document).ready(function(){
 			var tween8 = TweenMax.staggerFromTo('#animate8', 2, {left: 700}, {left: '0', opacity: 1, ease: Back.easeOut}, 0.15);
 			var tween9 = TweenMax.staggerFromTo('#animate9', 2, {top: -300}, {top: 0, opacity: 1, ease: Back.easeOut}, 0.15);
 			var tween10 = TweenMax.staggerFromTo('#animate10', 2, {bottom: -300, left: -300}, {bottom: 0, left: 0, opacity: 1, ease: Back.easeOut}, 0.15);
+			var tween11 = TweenMax.staggerFromTo('#animate11', 2, {left: 700}, {left: '50%', opacity: 1, ease: Back.easeOut}, 0.15);
+			var tween12 = TweenMax.staggerFromTo('#animate12', 2, {left: 700}, {left: '50%', opacity: 1, ease: Back.easeOut}, 0.15);
+			var tween13 = TweenMax.staggerFromTo('#animate13', 2, {left: 700}, {left: '50%', opacity: 1, ease: Back.easeOut}, 0.15);
 			// build scene
 			var scene = new ScrollMagic.Scene({triggerElement: '#trigger1', duration: 300})
 							.setTween(tween)
@@ -97,6 +100,15 @@ $(document).ready(function(){
 							.addTo(controller);
 			var scene10 = new ScrollMagic.Scene({triggerElement: '#trigger10', duration: 300})
 							.setTween(tween10)
+							.addTo(controller);
+			var scene11 = new ScrollMagic.Scene({triggerElement: '#trigger11', duration: 300})
+							.setTween(tween11)
+							.addTo(controller);
+			var scene12 = new ScrollMagic.Scene({triggerElement: '#trigger12', duration: 300})
+							.setTween(tween12)
+							.addTo(controller);
+			var scene13 = new ScrollMagic.Scene({triggerElement: '#trigger13', duration: 300})
+							.setTween(tween13)
 							.addTo(controller);
 		}
 	});
