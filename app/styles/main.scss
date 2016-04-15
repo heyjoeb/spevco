@@ -765,11 +765,11 @@ html, body {
       background: rgba(0,0,0,0.5);
       padding: 30px 20px 30px 8%;
       left: 0;
-      bottom: 17.5%;
+      bottom: 14.5%;
       width: 45%;
       z-index: 1;
       @include breakpoint(lrg) { 
-        bottom: 9.5%;
+        bottom: 1.5%;
       }
       @include breakpoint(md) { 
         position: relative;
@@ -1616,6 +1616,7 @@ html, body {
       padding-top: 50px;
       padding-bottom: 40px;
       font-weight: 600;
+      font-size: 1.1em;
     }
     .txt-italics {
       font-style: italic;
@@ -1623,7 +1624,7 @@ html, body {
     }
   }
   .spevco-capabilities {
-    padding: 100px 0;
+    padding: 70px 0;
     color: #706F6F;
     @include breakpoint(md) { 
       padding: 50px 0;
@@ -1649,6 +1650,10 @@ html, body {
       @include breakpoint(md) { 
         padding-bottom: 30px;
       } 
+      @include breakpoint(sm) { 
+        text-align: center;
+        padding: 0 20px;
+      } 
     }
     ul {
       list-style: none;
@@ -1670,7 +1675,7 @@ html, body {
     }
   }
   .section-gray {
-    padding: 100px 0;
+    padding: 70px 0;
     background: #515559;
     @include breakpoint(md) { 
       padding: 50px 0;
@@ -1707,7 +1712,7 @@ html, body {
     }
   }
   .our-team {
-    padding: 100px 0;
+    padding: 70px 0;
     background-color: #fff;
     @include breakpoint(md) { 
       padding: 50px 0;
@@ -1730,9 +1735,7 @@ html, body {
       } 
     }
     .team-member-container {
-      @include breakpoint(md) { 
-        margin-bottom: 30px;
-      } 
+      margin-bottom: 30px;
       @include breakpoint(xxs) { 
         width: 100%;
       } 
@@ -1744,6 +1747,21 @@ html, body {
       background-position: center center;
       position: relative;
       overflow: hidden;
+      &.one {
+        background-image: url(../images/MartyTharpe.jpg);
+      }
+      &.two {
+        background-image: url(../images/TiiTharpe.jpg);
+      }
+      &.three {
+        background-image: url(../images/FranWeller.jpg);
+      }
+      &.four {
+        background-image: url(../images/RogerMeneely.jpg);
+      }
+      &.five {
+        background-image: url(../images/JoePatrick.jpg);
+      }
       &:hover {
         .overlay {
           opacity: 1;
@@ -1762,6 +1780,21 @@ html, body {
         }
         .wrapper-member-icons {
           left: 0;
+        }
+        &.one {
+          background-image: url(../images/MartyTharpeBw.jpg);
+        }
+        &.two {
+          background-image: url(../images/TiiTharpeBw.jpg);
+        }
+        &.three {
+          background-image: url(../images/FranWellerBw.jpg);
+        }
+        &.four {
+          background-image: url(../images/RogerMeneelyBw.jpg);
+        }
+        &.five {
+          background-image: url(../images/JoePatrickBw.jpg);
         }
       }
     }
