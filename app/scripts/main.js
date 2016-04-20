@@ -26,6 +26,7 @@ $(document).ready(function(){
 		mode: 'fade',
 		pagerCustom: '#animate4'
 	});
+	$('.capabilities-slider').bxSlider();
 	// responsive video embed
 	$('.responsive-video-embed').fitVids();
 	// ADD SLIDEDOWN ANIMATION TO DROPDOWN //
